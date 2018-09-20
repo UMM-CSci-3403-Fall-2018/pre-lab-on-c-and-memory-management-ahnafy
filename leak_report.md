@@ -4,4 +4,4 @@ We make sure memory is allocate to result so that each character is kept track o
 
 ## To fix the memory leak
 
-We need to free memory in the function is_clean. After the string comaparison is made, we check if the cleaned string is null. If not, we make sure the memory is free. However, for a null string that cannot be made to happed. 
+We need to free memory in the function is_clean. After the string comaparison is made, we check if the cleaned string is null. If not, we make sure the memory is free. However, for a null string that cannot be made to happen. Our function takes care of that. 
