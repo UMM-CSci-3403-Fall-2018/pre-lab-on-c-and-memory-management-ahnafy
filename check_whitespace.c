@@ -67,7 +67,12 @@ int is_clean(char* str) {
   // greater than the second.
   result = strcmp(str, cleaned);
 
-free(cleaned);
+ // If cleaned isn't deallocated it will result into memory leak. 
+  // However, if cleaned is 0, there will be nothing to deallocate
+// so this function takes care of that 
+  if (strlen(cleaned) != 0) {
+    free(cleaned); 
+  }
 
   return result == 0;
 }
